@@ -11,34 +11,7 @@ somaSalarialMulheres, mediaSalarialMulheres : real
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc...
-
-escreval("digite a sua idade: ")
-    leia(idade)
-
-    escreval("digite M para sexo masculino: ")
-    escreval("digite F para sexo feminino: ")
-    leia(sexo)
-
-    escreval("digite o seu salário: ")
-    leia(salario)
-
-    se(idade > 0) entao
-        escolha(sexo)
-            caso "M", "m"
-                 maiorIdadeHomens <- idade
-                 menorIdadeHomens <- idade
-                 somaSalarialHomens <- somaSalarialHomens + salario
-                 homens <- homens + 1
-            caso "F", "f"
-                 maiorIdadeMulheres <- idade
-                 menorIdadeMulheres <- idade
-                 somaSalarialMulheres <- somaSalarialMulheres + salario
-                 mulheres <- mulheres + 1
-            outrocaso
-                 escreval("ERRO!")
-            fimescolha
-                 
-enquanto idade >= 0 faca
+repita
 
     escreval("digite a sua idade: ")
     leia(idade)
@@ -82,6 +55,7 @@ enquanto idade >= 0 faca
                  
                  se(salario < 1000) entao
                      abaixoDeMil <- abaixoDeMil + 1
+                 fimse
 
                  somaSalarialMulheres <- somaSalarialMulheres + salario
                  mulheres <- mulheres + 1
@@ -90,7 +64,7 @@ enquanto idade >= 0 faca
             fimescolha
      fimse
 
-fimenquanto
+ate idade <= 0
 
 limpatela
 
@@ -100,9 +74,9 @@ mediaSalarialMulheres <- somaSalarialMulheres / mulheres
 escreval("média salarial dos homens: R$", mediaSalarialHomens:1:2)
 escreval("maior idade dos homens: ", maiorIdadeHomens)
 escreval("menor idade dos homens: ", menorIdadeHomens)
-escreval("média salarial dos homens: R$", mediaSalarialMulheres:1:2)
-escreval("maior idade dos homens: ", maiorIdadeMulheres)
-escreval("menor idade dos homens: ", menorIdadeMulheres)
+escreval("média salarial das mulheres: R$", mediaSalarialMulheres:1:2)
+escreval("maior idade das mulheres: ", maiorIdadeMulheres)
+escreval("menor idade das mulheres: ", menorIdadeMulheres)
 escreval("quantidade de mulheres que recebem abaixo de R$1000,00: ", abaixoDeMil)
 
 Fimalgoritmo
