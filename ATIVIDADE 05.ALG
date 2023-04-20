@@ -3,7 +3,7 @@ Algoritmo "atividade 05"
 // Data atual  : 20/04/2023
 Var
 // Seção de Declarações das variáveis 
-numero, divisor, n, num : inteiro
+numero, num : inteiro
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
